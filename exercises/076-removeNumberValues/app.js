@@ -5,7 +5,12 @@ let obj = {
 };
 function removeNumberValues(obj) {
     // your code here
-    
+    for (const prop in obj) {
+        if(typeof obj[prop] === 'number') {
+            delete obj[prop]
+        }
+    }
+    return obj
 }
 
 removeNumberValues(obj);
